@@ -8,14 +8,14 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: #222;
   background: #f7f5f0;
+ 
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #FCECEA;
 }
 a:hover {
   color: #6633ff;
@@ -25,12 +25,13 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background-color:rgb(106, 36, 51, .8);
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -43,9 +44,9 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: #FCECEA;
 }
-.nav li {
+.nav li,.interests-nav-list li {
   padding: 5px 10px 10px 10px;
 }
 .nav a {
@@ -60,7 +61,7 @@ header {
   background: url('images/background.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 0px;
 }
 header {
   line-height: 1.5;
@@ -71,23 +72,24 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #454545;
+  border: 3px solid #454545;
   transition: all .5s;
 }
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 .tag {
-  background-color: #EE817B;
+  background-color: #6a2433;
   color: #FCECEA;
-  padding: 10px;
+  padding: 10px 25px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: #454545;
+  background-color: #842c3f;
   color: #FCECEA;
+  
 }
 .card {
   margin: 30px;
@@ -189,11 +191,6 @@ a.social:hover {
     padding: 0 30px;
   }
 
-
-  main {
-    padding-top: 20px;
-  }
-
   main p {
     line-height: 1.6em;
   }
@@ -204,5 +201,186 @@ a.social:hover {
     margin: 40px auto;
   }
 
+  /*-------------------------------
+  interests.com
+  -------------------------------*/
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav-interests {
+    width: 100%;
+    background: rgba(49, 81, 87, .8);
+    min-height: 30px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    z-index: 50;
+  }
+
+  .nav-list-interests {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .name-interests {
+    color: white;
+    margin-right: auto;
+  
+  }
+
+  .header-interests {
+    text-align: center;
+    background: url('images/header-interests.jpg') no-repeat center center ;
+    background-size: cover;
+ 
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+ 
+  .tag-interests {
+    color: #5b1e2b;
+    font-size: 70px;
+    position: relative;
+    margin-top: -100px;
+  }
+
+  .tag-interests::after {
+    content:"";
+display: block;
+width: 387px;
+height: 3px;
+position: absolute;
+bottom: 6%;
+left: 5px;
+background-color: #6a2433;
+  }
+  
+.flex-interests {
+
+  width: 100%;
+ 
+
+  margin: 0 auto 200px;
+  background-color: #fff;
+  position: relative;
 }
 
+  
+  .flex-interests-right {
+
+    width: 100%;
+   
+  
+    margin-right: 0;
+    background-color: #fff;
+    position: relative;
+  
+  }
+
+.title-interests {
+  font-size: 35px;
+  letter-spacing: .3em;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+  color: #5b1e2b;
+  font-weight: normal;
+  margin-bottom: 90px;
+
+}
+
+.img-interests {
+  width: 750px;
+  font-size: 0;
+  margin-right: 0;
+}
+
+.img-interests img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.img-interests-right {
+  width: 750px;
+  font-size: 0;
+  margin-left: 0;
+}
+
+.img-interests-right img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.img-interests-right {
+  width: 750px;
+  font-size: 0;
+  margin-left: 0;
+}
+
+.card-interests {
+  width: 520px;
+  height: 450px;
+  padding: 120px;
+  color: #525252;
+  background-color: #d6d1ce;
+
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  z-index: 0;
+}
+
+.card-interests-right {
+  width: 520px;
+  height: 450px;
+  padding: 120px;
+  color: #525252;
+  background-color: #d6d1ce;
+
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  z-index: 0;
+}
+
+.card-interests p {
+text-align: left;
+line-height: 1.9;
+}
+
+.card-interests:hover {
+  border-color: #ff99ff;
+}
+
+.card-interests h3 {
+
+  font-size: 35px;
+  letter-spacing: .1em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+}
+-interests
+
+}
+
+background-color:rgb(132, 64, 63, .8);
