@@ -9,7 +9,6 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   background: #f7f5f0;
- 
 }
 /* Link Styles */
 
@@ -56,7 +55,7 @@ a:hover {
   color: white
 }
 
-header {
+.header-index {
   text-align: center;
   background: url('images/background.jpg') no-repeat top center ;
   background-size: cover;
@@ -68,16 +67,18 @@ header {
 }
 
 header .profile-image {
-  margin-top: 50px;
+  margin-top: 80px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid #454545;
   transition: all .5s;
 }
+
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
+
 .tag {
   background-color: #6a2433;
   color: #FCECEA;
@@ -86,6 +87,17 @@ header .profile-image:hover {
   display: table;
   margin: 10px auto;
 } 
+
+.tag::after {
+  content:"";
+  display: block;
+  width: 387px;
+  height: 3px;
+  position: absolute;
+  bottom: 6%;
+  left: 4px;
+  background-color: #6a2433;
+}
 .location {
   background-color: #842c3f;
   color: #FCECEA;
@@ -195,7 +207,7 @@ a.social:hover {
     line-height: 1.6em;
   }
 
-  footer {
+  footer #footer-home {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
@@ -204,14 +216,13 @@ a.social:hover {
   /*-------------------------------
   interests.com
   -------------------------------*/
-
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
   }
   .nav-interests {
     width: 100%;
-    background: rgba(49, 81, 87, .8);
+    background: rgba(64, 67, 78, .8);
     min-height: 30px;
     padding: 10px;
     position: fixed;
@@ -229,6 +240,10 @@ a.social:hover {
     padding: 0 30px;
   }
 
+  .nav-list-interests li {
+    margin-left: 30px;
+  }
+
   .name-interests {
     color: white;
     margin-right: auto;
@@ -239,36 +254,132 @@ a.social:hover {
     text-align: center;
     background: url('images/header-interests.jpg') no-repeat center center ;
     background-size: cover;
- 
     position: relative;
     z-index: 0;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-  }
- 
-  .tag-interests {
-    color: #5b1e2b;
-    font-size: 70px;
-    position: relative;
-    margin-top: -100px;
-  }
+ .contents-header {
+    width: 395px;
+    text-align: left;
+ }
+
+ .tag-interests {
+  color: #5b1e2b;
+  font-size: 70px;
+  position: relative;
+  margin-top: -100px;
+  width: 420px;
+}
+
+ .text-tag-interests {
+  letter-spacing: .08em;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #5b1e2b;
+  padding: 5px 0 0 2px;
+  font-family: 'Times New Roman', Times, serif;
+ }
 
   .tag-interests::after {
     content:"";
-display: block;
-width: 387px;
-height: 3px;
-position: absolute;
-bottom: 6%;
-left: 5px;
-background-color: #6a2433;
+    display: block;
+    width: 387px;
+    height: 3px;
+    position: absolute;
+    bottom: 6%;
+    left: 4px;
+    background-color: #6a2433;
   }
   
-.flex-interests {
+/* People */  
+/* common */
+.img-interests {
+  width: 630px;
+  height: 350px;
+}
+
+.title-interests {
+  font-size: 35px;
+  letter-spacing: .3em;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+  color: #5b1e2b;
+  font-weight: normal;
+  margin-bottom: 70px;
+}
+
+/* TOP/Yuzuru Hanyu */  
+.contents-interests {
+  position: relative;
+  height: 49vh;
+  margin-bottom: 70px;
+
+}
+
+.img-interests {
+  width: 670px;
+}
+
+.img-interests img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.img-top {
+  margin-right: auto;
+}
+
+.card-interests {
+  width: 630px;
+  height: 340px;
+  padding: 90px 100px;
+  color: #525252;
+  background-color: #bdc6b8;
+  position: absolute;
+}
+
+.card-top {
+  top: 17%;
+  right: 0;
+ }
+
+.card-interests h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* BTM/Kurt Cobain */  
+
+.img-btm {
+  position: absolute;
+  top: 17%;
+  right: 0;
+
+}
+
+.card-btm {
+
+}
+
+#hobbies .title-interests {
+
+}
+
+#footer-interests {
+  border-top: 1px solid#6a2433;
+}
+
+.copyright-interests {
+
+}
+/*
+.contents-interests {
 
   width: 100%;
  
@@ -290,17 +401,6 @@ background-color: #6a2433;
   
   }
 
-.title-interests {
-  font-size: 35px;
-  letter-spacing: .3em;
-  text-align: center;
-  padding: 40px 0;
-  background-color: #fff;
-  color: #5b1e2b;
-  font-weight: normal;
-  margin-bottom: 90px;
-
-}
 
 .img-interests {
   width: 750px;
@@ -380,7 +480,7 @@ line-height: 1.9;
 }
 }
 -interests
-
+*/
 }
 
 background-color:rgb(132, 64, 63, .8);
