@@ -1,30 +1,33 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  color: #222;
   background: #f7f5f0;
 }
+
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #FCECEA;
+  color: #999;
 }
+
 a:hover {
-  color: #6633ff;
+  color: #fff;
 }
 
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background-color:rgb(106, 36, 51, .8);
+  background: black;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -41,37 +44,37 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: #FCECEA;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
-.nav li,.interests-nav-list li {
+
+.nav li {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a {
   transition: all .5s;
 }
-.nav a:hover {
-  color: white
-}
 
-.header-index {
+header {
   text-align: center;
-  background: url('images/background.jpg') no-repeat top center ;
+  background: url('images/background.jpg') no-repeat top center;
   background-size: cover;
   overflow: hidden;
-  padding-top: 0px;
+  padding-top: 60px;
 }
+
 header {
   line-height: 1.5;
 }
 
 header .profile-image {
-  margin-top: 80px;
+  margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #454545;
+  border: 3px solid white;
   transition: all .5s;
 }
 
@@ -80,29 +83,19 @@ header .profile-image:hover {
 }
 
 .tag {
-  background-color: #6a2433;
-  color: #FCECEA;
-  padding: 10px 25px;
+  background-color: #efefef;
+  color: black;
+  padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 
-.tag::after {
-  content:"";
-  display: block;
-  width: 387px;
-  height: 3px;
-  position: absolute;
-  bottom: 6%;
-  left: 4px;
-  background-color: #6a2433;
-}
 .location {
-  background-color: #842c3f;
-  color: #FCECEA;
-  
+  background-color: #222;
+  color: yellow;
 }
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
@@ -113,6 +106,7 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+
 .card:hover {
   border-color: #ff99ff;
 }
@@ -142,7 +136,6 @@ footer {
 }
 
 footer .copyright {
-  top: -8px;
   font-size: .75em;
 }
 
@@ -159,39 +152,37 @@ footer ul li {
 a.social {
   display: inline-block;
   text-indent: -9999px;
-  margin-left: 5px;
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
   opacity: .4;
   transition: all .5s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
+
 a.github {
   background-image: url(images/github.svg);
 }
+
 a.social:hover {
   opacity: 1;
 }
+
 .clearfix {
   clear: both;
 }
 
 /* Styles for larger screens */
+
 @media screen and (min-width: 720px) {
-  
+
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox;/* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 20px;
   }
 
   header {
@@ -207,7 +198,7 @@ a.social:hover {
     line-height: 1.6em;
   }
 
-  footer #footer-home {
+  .footer-home {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
@@ -220,6 +211,9 @@ a.social:hover {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  /* Navigations */
+  
   .nav-interests {
     width: 100%;
     background: rgba(64, 67, 78, .8);
@@ -244,15 +238,23 @@ a.social:hover {
     margin-left: 30px;
   }
 
+  .nav-list-interests li a {
+    color: white;
+    transition: all .5s;
+  }
+
+  .nav-list-interests li a:hover {
+    color: #bdc6b8;
+  }
+
   .name-interests {
     color: white;
     margin-right: auto;
-  
   }
 
   .header-interests {
     text-align: center;
-    background: url('images/header-interests.jpg') no-repeat center center ;
+    background: url('images/header-interests.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     z-index: 0;
@@ -262,30 +264,30 @@ a.social:hover {
     align-items: center;
   }
 
- .contents-header {
+  .contents-header {
     width: 395px;
     text-align: left;
- }
+  }
 
- .tag-interests {
-  color: #5b1e2b;
-  font-size: 70px;
-  position: relative;
-  margin-top: -100px;
-  width: 420px;
-}
+  .tag-interests {
+    color: #5b1e2b;
+    font-size: 70px;
+    position: relative;
+    margin-top: -100px;
+    width: 420px;
+  }
 
- .text-tag-interests {
-  letter-spacing: .08em;
-  line-height: 1.5;
-  font-size: 15px;
-  color: #5b1e2b;
-  padding: 5px 0 0 2px;
-  font-family: 'Times New Roman', Times, serif;
- }
+  .text-tag-interests {
+    letter-spacing: .08em;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #5b1e2b;
+    padding: 5px 0 0 2px;
+    font-family: 'Times New Roman', Times, serif;
+  }
 
   .tag-interests::after {
-    content:"";
+    content: "";
     display: block;
     width: 387px;
     height: 3px;
@@ -294,193 +296,113 @@ a.social:hover {
     left: 4px;
     background-color: #6a2433;
   }
+
+  /* Section - "People" */
   
-/* People */  
-/* common */
-.img-interests {
-  width: 630px;
-  height: 350px;
-}
-
-.title-interests {
-  font-size: 35px;
-  letter-spacing: .3em;
-  text-align: center;
-  padding: 40px 0;
-  background-color: #fff;
-  color: #5b1e2b;
-  font-weight: normal;
-  margin-bottom: 70px;
-}
-
-/* TOP/Yuzuru Hanyu */  
-.contents-interests {
-  position: relative;
-  height: 49vh;
-  margin-bottom: 70px;
-
-}
-
-.img-interests {
-  width: 670px;
-}
-
-.img-interests img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-.img-top {
-  margin-right: auto;
-}
-
-.card-interests {
-  width: 630px;
-  height: 340px;
-  padding: 90px 100px;
-  color: #525252;
-  background-color: #bdc6b8;
-  position: absolute;
-}
-
-.card-top {
-  top: 17%;
-  right: 0;
- }
-
-.card-interests h3 {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-/* BTM/Kurt Cobain */  
-
-.img-btm {
-  position: absolute;
-  top: 17%;
-  right: 0;
-
-}
-
-.card-btm {
-
-}
-
-#hobbies .title-interests {
-
-}
-
-#footer-interests {
-  border-top: 1px solid#6a2433;
-}
-
-.copyright-interests {
-
-}
-/*
-.contents-interests {
-
-  width: 100%;
- 
-
-  margin: 0 auto 200px;
-  background-color: #fff;
-  position: relative;
-}
-
-  
-  .flex-interests-right {
-
-    width: 100%;
-   
-  
-    margin-right: 0;
-    background-color: #fff;
-    position: relative;
-  
+  .img-interests {
+    width: 630px;
+    height: 350px;
   }
 
+  .title-interests {
+    font-size: 35px;
+    letter-spacing: .3em;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+    color: #5b1e2b;
+    font-weight: normal;
+    margin-bottom: 70px;
+  }
 
-.img-interests {
-  width: 750px;
-  font-size: 0;
-  margin-right: 0;
+  .contents-interests {
+    position: relative;
+    height: 49vh;
+    margin-bottom: 70px;
+  }
+
+  .img-interests {
+    width: 670px;
+  }
+
+  /* images of Yuzuru Hanyu & Art/Drawing */
+
+  .img-interests img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .img-top {
+    margin-right: auto;
+  }
+
+  .card-interests {
+    width: 630px;
+    height: 340px;
+    padding: 60px 100px;
+    color: #525252;
+    background-color: #bdc6b8;
+    position: absolute;
+    transition: all .5s;
+  }
+
+  .card-interests h3 {
+    letter-spacing: .05em;
+    position: relative;
+  }
+
+  .card-interests p {
+    text-align: left;
+    line-height: 1.8;
+  }
+
+  .card-interests:hover {
+    background-color: #d6e4ce;
+  }
+
+  /* Cards for Yuzuru Hanyu & Art/Drawing */
+
+  .card-top {
+    top: 17%;
+    right: 0;
+  }
+
+  .card-interests h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  /* Images of Kurt Cobain & Reading */
+
+  .img-btm {
+    position: absolute;
+    top: 17%;
+    right: 0;
+  }
+
+  /* footer */
+  #footer-interests {
+    width: 100%;
+    border-top: solid 1px #5b1e2b;
+  }
+
+  #footer-interests ul {
+    margin: 20px 0 10px;
+  }
+
+  /* SNS icons */
+  .social-interests {
+    font-size: 27px;
+    color: #525252;
+  }
+
+  .social-interests:hover {
+    color: #bdc6b8;
+  }
+
+  .copyright-interests {
+    font-size: .70em;
+    color: #525252;
+  }
 }
-
-.img-interests img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
-.img-interests-right {
-  width: 750px;
-  font-size: 0;
-  margin-left: 0;
-}
-
-.img-interests-right img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
-.img-interests-right {
-  width: 750px;
-  font-size: 0;
-  margin-left: 0;
-}
-
-.card-interests {
-  width: 520px;
-  height: 450px;
-  padding: 120px;
-  color: #525252;
-  background-color: #d6d1ce;
-
-  position: absolute;
-  top: 20%;
-  right: 0%;
-  z-index: 0;
-}
-
-.card-interests-right {
-  width: 520px;
-  height: 450px;
-  padding: 120px;
-  color: #525252;
-  background-color: #d6d1ce;
-
-  position: absolute;
-  top: 20%;
-  left: 0%;
-  z-index: 0;
-}
-
-.card-interests p {
-text-align: left;
-line-height: 1.9;
-}
-
-.card-interests:hover {
-  border-color: #ff99ff;
-}
-
-.card-interests h3 {
-
-  font-size: 35px;
-  letter-spacing: .1em;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.flex-reverse {
-  flex-direction: row-reverse;
-}
-}
--interests
-*/
-}
-
-background-color:rgb(132, 64, 63, .8);
