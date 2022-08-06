@@ -152,6 +152,7 @@ footer ul li {
 a.social {
   display: inline-block;
   text-indent: -9999px;
+
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
@@ -221,7 +222,7 @@ a.social:hover {
     padding: 10px;
     position: fixed;
     text-align: center;
-    z-index: 50;
+    z-index: 2000;
   }
 
   .nav-list-interests {
@@ -264,9 +265,22 @@ a.social:hover {
     align-items: center;
   }
 
+  .header-interests img {
+    width: 36%;
+    height: 24%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    opacity: .7;
+  }
+
   .contents-header {
     width: 395px;
     text-align: left;
+    position: absolute;
+    z-index: 100;
   }
 
   .tag-interests {
@@ -303,22 +317,42 @@ a.social:hover {
     width: 630px;
     height: 350px;
   }
-
+  
   .title-interests {
     font-size: 35px;
     letter-spacing: .3em;
     text-align: center;
     padding: 40px 0;
-    background-color: #fff;
     color: #5b1e2b;
     font-weight: normal;
-    margin-bottom: 70px;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 90px;
   }
 
+  .title {
+    position: relative;
+    height: 120px;
+    background-color: #fff;
+    
+  }
+
+  .title img {
+    width: 27%;
+    position: absolute;
+    height: 90px;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+  
   .contents-interests {
     position: relative;
     height: 49vh;
-    margin-bottom: 70px;
+    margin-top: 70px;
+    margin-bottom: 95px;
   }
 
   .img-interests {
@@ -347,9 +381,9 @@ a.social:hover {
     transition: all .5s;
   }
 
-  .card-interests h3 {
-    letter-spacing: .05em;
-    position: relative;
+  .subtitle-line {
+    border-bottom: solid 2px #5b1e2b;
+    padding-bottom: 3px;
   }
 
   .card-interests p {
@@ -370,7 +404,9 @@ a.social:hover {
 
   .card-interests h3 {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 23px;
+    letter-spacing: .05em;
+    position: relative;
   }
 
   /* Images of Kurt Cobain & Reading */
