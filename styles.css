@@ -177,7 +177,8 @@ a.social:hover {
 @media screen and (min-width: 720px) {
 
   .flex {
-    display: -ms-flexbox;/* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
     display: flex;
     max-width: 1200px;
     -ms-flex-pack: distribute;
@@ -214,7 +215,7 @@ a.social:hover {
   }
 
   /* Navigations */
-  
+
   .nav-interests {
     width: 100%;
     background: rgba(64, 67, 78, .8);
@@ -312,47 +313,61 @@ a.social:hover {
   }
 
   /* Section - "People" */
-  
+
   .img-interests {
     width: 630px;
     height: 350px;
   }
-  
-  .title-interests {
-    font-size: 35px;
-    letter-spacing: .3em;
-    text-align: center;
-    padding: 40px 0;
-    color: #5b1e2b;
-    font-weight: normal;
-    position: absolute;
-    z-index: 999;
+
+  .title-wrapper-people {
+    background-image: url('images/people.png');
+    background-size: 27% 70%;
+  }
+
+  .title-wrapper-hobbies {
+    background-image: url('images/hobbies.png');
+    background-size: 27% 70%;
+  }
+
+  .common {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+
     width: 100%;
-    height: 90px;
+    height: 120px;
+    position: relative;
+    z-index: 0;
   }
 
   .title {
-    position: relative;
-    height: 120px;
-    background-color: #fff;
-    
+    color: #5b1e2b;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
   }
 
-  .title img {
-    width: 27%;
-    position: absolute;
-    height: 90px;
-    top: 51%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
+  .title-interests {
+    letter-spacing: .3em;
+    font-size: 35px;
+    margin: 0 auto;
+    font-weight: normal;
   }
-  
+
   .contents-interests {
     position: relative;
     height: 49vh;
-    margin-top: 70px;
-    margin-bottom: 95px;
+
+  }
+  .top {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .btm {
+    margin-bottom: 70px;
   }
 
   .img-interests {
